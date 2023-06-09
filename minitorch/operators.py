@@ -65,9 +65,9 @@ def sigmoid(x: float) -> float:
     for stability.
     """
     if x >= 0:
-        return math.exp(x) / (1.0 + math.exp(x))
+        return 1.0 / (1.0 + exp(-1 * x))
     else:
-        return 1.0 / (1.0 + math.exp(-x))
+        return exp(x) / (1.0 + exp(x))
 
 
 def relu(x: float) -> float:
